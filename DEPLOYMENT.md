@@ -128,7 +128,7 @@ This guide provides step-by-step instructions for deploying the **Maison Aurelle
 
 6. Click **Save and Deploy**.
 7. Cloudflare Pages builds the app and provisions global CDN edge delivery with SSL certificates enabled automatically.
-8. *(Note: SPA routing is pre-configured via `frontend/public/_redirects` which redirects all incoming paths to `/index.html 200`).*
+8. *(Note: SPA routing is natively configured via `frontend/wrangler.json` with `"not_found_handling": "single-page-application"` to prevent any infinite loop errors with Cloudflare's asset pipeline).*
 
 ---
 
